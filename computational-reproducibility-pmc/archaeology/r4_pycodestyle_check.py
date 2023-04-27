@@ -47,22 +47,23 @@ def call_codestyle_check(session, repository, notebook):
             code_style_err = out.decode('UTF-8').rstrip().split('\n')
             for err in code_style_err:
                 x = re.search(r"(.*)#In\[(.*)\]:(\d+):(\d+): (\w\d+) (.*)", err)
-                if (len(x.groups() == 6)):
-                    notebook_name = x.group(1)
-                    cell_index = x.group(2)
-                    err_code = x.group(5)
-                    err_code_desc = x.group(6)
+                if x:
+                    if (len(x.groups()) == 6):
+                        notebook_name = x.group(1)
+                        cell_index = x.group(2)
+                        err_code = x.group(5)
+                        err_code_desc = x.group(6)
 
-                    notebook_code_style = NotebookCodeStyle(
-                        cell_index = cell_index,
-                        err_code = err_code,
-                        err_code_desc = err_code_desc,
-                        notebook_id = notebook.id,
-                        repository_id = notebook.repository_id,
-                    )
-                    session.add(notebook_code_style)
-                    session.commit()
-                    vprint(1, "Done. NotebookCodeStyle  ID={}".format(notebook_code_style.id))
+                        notebook_code_style = NotebookCodeStyle(
+                            cell_index = cell_index,
+                            err_code = err_code,
+                            err_code_desc = err_code_desc,
+                            notebook_id = notebook.id,
+                            repository_id = notebook.repository_id,
+                        )
+                        session.add(notebook_code_style)
+                        session.commit()
+                        vprint(1, "Done. NotebookCodeStyle  ID={}".format(notebook_code_style.id))
 
 
 def check_pycodestyline_nb(session):
