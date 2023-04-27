@@ -3,6 +3,7 @@ import config
 from db import Repository, Article, RepositoryData, RepositoryRelease, connect
 from utils import mount_basedir, savepid, vprint
 from datetime import datetime, timedelta
+import time
 
 
 def get_repo_info_github_api(session):
@@ -12,8 +13,14 @@ def get_repo_info_github_api(session):
         if repository is not None:
             if repository.repository=='features/actions':
                 vprint(1, "Repository not found")
+                continue            
+            repository_data = session.query(RepositoryData).filter(
+                RepositoryData.repository_id == repository.id,
+                RepositoryData.article_id == repository.article_id,
+            ).first()
+            if repository_data is not None:
+                vprint(1, "Repository Data exists: Repository ID={}, Article ID={}".format(repository.id, repository.article_id))
                 continue
-            vprint(1, "Repository exists: Repository ID={}, Article ID={}".format(repository.id, repository.article_id))
             github = Github(
                 config.GITHUB_TOKEN
             )
@@ -93,6 +100,7 @@ def get_repo_info_github_api(session):
                 session.add(repository_release)
                 session.commit()
                 vprint(1, "Done. RepositoryRelease ID={}".format(repository_release.id))
+                time.sleep(3)
         else:
             vprint(1, "Repository does not exists: ID={}".format(repository.repository))
 
