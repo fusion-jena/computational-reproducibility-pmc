@@ -4,6 +4,7 @@ import hashlib
 import subprocess
 import shutil
 import os
+from github import Github, GithubException
 
 import requests
 
@@ -46,11 +47,29 @@ def get_remote(domain, repo):
     return remote
 
 def check_url_exists(remote):
+    """Check if repository is available"""
     request = requests.get(remote)
     if request.status_code == 200:
         return 1
     else:
         return 0
+
+def check_repo_not_empty(repo):
+    """Check if repository is empty or not"""
+    github = Github(
+                config.GITHUB_TOKEN
+            )
+    try:
+        repository = github.get_repo(repo)
+        if repository.size != 0:
+            return 1
+        else:
+            return 0
+    except GithubException as e:
+        if e.status == 404:
+            vprint(0, "Repository not found: {}".format(repo))
+        else:
+            raise e
 
 
 def git(*args):
@@ -103,10 +122,13 @@ def load_repository_from_url(session, url, article_id, branch=None,
     domain, repo = extract_domain_repository(url)
     remote = get_remote(domain, repo)
     if check_url_exists(remote):
-        vprint(0, "url: {}, branch: {}, commit:{}, clone_existing: {}".format(url, branch, commit, clone_existing))
-        return load_repository(
-            session, domain, repo, article_id,
-            branch=branch, commit=commit, clone_existing=clone_existing)
+        if check_repo_not_empty(repo):
+            vprint(0, "url: {}, branch: {}, commit:{}, clone_existing: {}".format(url, branch, commit, clone_existing))
+            return load_repository(
+                session, domain, repo, article_id,
+                branch=branch, commit=commit, clone_existing=clone_existing)
+        else:
+            vprint(0, "Repository is empty: {}".format(url))
     else:
         vprint(0, "Repository not found: {}".format(url))
 
