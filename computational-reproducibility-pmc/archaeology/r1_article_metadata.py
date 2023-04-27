@@ -25,7 +25,7 @@ def preprocess_url(url):
             if repo.endswith(".git"):
                 repo = repo[:-4]
             repo = repo.split("/")[:2] # Get only the pathname and remove others
-            if repo[0] == 'orgs':
+            if repo[0] == 'orgs' or repo[0] == 'collections' or repo[0] == 'topics':
                 return
             repo = "/".join(repo)
             if repo.endswith("."):
