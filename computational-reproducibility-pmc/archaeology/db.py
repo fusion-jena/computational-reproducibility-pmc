@@ -1888,7 +1888,6 @@ def connect(echo=False, config=config):
     """Creates a context with an open SQLAlchemy session."""
     engine = create_engine(
         config.DB_CONNECTION,
-        convert_unicode=True,
         echo=echo
     )
     Base.metadata.create_all(engine)
