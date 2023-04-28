@@ -36,9 +36,14 @@ Other environment variables can also be set in the config.py file.
 Install conda and anaconda environments for each python version. In each environment, upgrade pip, install pipenv, and install the archaeology package.
 
 ```
+conda install -c conda-forge lbzip2
+```
+
+```
 conda create -n raw27 python=2.7 -y
 conda activate raw27
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
@@ -48,6 +53,7 @@ conda deactivate
 conda create -n py27 python=2.7 anaconda -y
 conda activate py27
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
@@ -57,6 +63,7 @@ conda deactivate
 conda create -n raw35 python=3.5 -y
 conda activate raw35
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
@@ -67,6 +74,7 @@ conda create -n py35 python=3.5 anaconda -y
 conda activate py35
 conda install -y appdirs atomicwrites keyring secretstorage libuuid navigator-updater prometheus_client pyasn1 pyasn1-modules spyder-kernels tqdm jeepney automat constantly anaconda-navigator
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv --ignore-installed
 pip install -e  archaeology
 conda deactivate
@@ -76,6 +84,7 @@ conda deactivate
 conda create -n raw36 python=3.6 -y
 conda activate raw36
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
@@ -86,8 +95,12 @@ conda create -n py36 python=3.6 anaconda -y
 conda activate py36
 conda install -y anaconda-navigator jupyterlab_server navigator-updater
 pip install --upgrade pip
+pip install nbdime
+pip install flake8-nb
+pip install biopython
 pip install pipenv
 pip install -e  archaeology
+python -c "import nltk; nltk.download('stopwords')"
 conda deactivate
 ```
 
@@ -95,6 +108,7 @@ conda deactivate
 conda create -n raw37 python=3.7 -y
 conda activate raw37
 pip install --upgrade pip
+pip install nbdime
 pip install -U pipenv
 pip install -e  archaeology
 conda deactivate
@@ -117,6 +131,7 @@ conda install -y rope scikit-image scikit-learn seaborn service_identity singled
 conda install -y tqdm traitlets twisted unicodecsv xlrd xlsxwriter xlwt zope zope.interface
 conda install -y sortedcollections typed-ast
 pip install --upgrade pip
+pip install nbdime
 pip install -U pipenv
 pip install -e  archaeology
 conda deactivate
@@ -126,6 +141,7 @@ conda deactivate
 conda create -n raw38 python=3.8 -y
 conda activate raw38
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e archaeology
 conda deactivate
@@ -135,6 +151,7 @@ conda deactivate
 conda create -n py38 python=3.8 anaconda -y
 conda activate py38
 pip install --upgrade pip
+pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
