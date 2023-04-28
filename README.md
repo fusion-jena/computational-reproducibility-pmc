@@ -122,6 +122,15 @@ conda deactivate
 ```
 
 ```
+conda create -n raw38 python=3.8 -y
+conda activate raw38
+pip install --upgrade pip
+pip install pipenv
+pip install -e archaeology
+conda deactivate
+```
+
+```
 conda create -n py38 python=3.8 anaconda -y
 conda activate py38
 pip install --upgrade pip
