@@ -52,3 +52,4 @@ widgetsnbextension==2.0.0
 wrapt==1.10.10
 nbdime
 flake8-nb
+biopython==1.78
