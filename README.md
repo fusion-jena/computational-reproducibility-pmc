@@ -63,10 +63,10 @@ conda deactivate
 
 ```
 conda create -n py35 python=3.5 anaconda -y
-conda install -y appdirs atomicwrites keyring secretstorage libuuid navigator-updater prometheus_client pyasn1 pyasn1-modules spyder-kernels tqdm jeepney automat constantly anaconda-navigator
 conda activate py35
+conda install -y appdirs atomicwrites keyring secretstorage libuuid navigator-updater prometheus_client pyasn1 pyasn1-modules spyder-kernels tqdm jeepney automat constantly anaconda-navigator
 pip install --upgrade pip
-pip install pipenv
+pip install pipenv --ignore-installed
 pip install -e  archaeology
 conda deactivate
 ```
