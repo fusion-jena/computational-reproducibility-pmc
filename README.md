@@ -24,7 +24,8 @@ db.sqlite: The SQLite database that contains all the data extracted in the study
 
 ## Installation:
 
-`cd computational-reproducibility-pmc`
+Change to computational-reproducibility-pmc directory:
+`cd computational-reproducibility-pmc/computational-reproducibility-pmc`
 
 Set the following environment variables in the config.py file:
 GITHUB_USERNAME = os.environ.get("JUP_GITHUB_USERNAME", "") # your github username
@@ -94,7 +95,7 @@ conda deactivate
 conda create -n raw37 python=3.7 -y
 conda activate raw37
 pip install --upgrade pip
-pip install pipenv
+pip install -U pipenv
 pip install -e  archaeology
 conda deactivate
 ```
@@ -116,7 +117,7 @@ conda install -y rope scikit-image scikit-learn seaborn service_identity singled
 conda install -y tqdm traitlets twisted unicodecsv xlrd xlsxwriter xlwt zope zope.interface
 conda install -y sortedcollections typed-ast
 pip install --upgrade pip
-pip install pipenv
+pip install -U pipenv
 pip install -e  archaeology
 conda deactivate
 ```
