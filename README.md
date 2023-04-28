@@ -139,6 +139,47 @@ pip install -e  archaeology
 conda deactivate
 ```
 
+```
+conda create -n raw39 python=3.9 -y
+conda activate raw39
+pip install --upgrade pip
+pip install nbdime
+pip install pipenv
+pip install -e archaeology
+conda deactivate
+```
+
+```
+conda create -n py39 python=3.9 anaconda -y
+conda activate py39
+pip install --upgrade pip
+pip install nbdime
+pip install pipenv
+pip install -e  archaeology
+conda deactivate
+```
+
+```
+conda create -n raw310 python=3.10 -y
+conda activate raw310
+pip install --upgrade pip
+pip install nbdime
+pip install pipenv
+pip install -e archaeology
+conda deactivate
+```
+
+```
+conda create -n py310 python=3.10 anaconda -y
+conda activate py310
+pip install --upgrade pip
+pip install nbdime
+pip install pipenv
+pip install -e  archaeology
+conda deactivate
+```
+
+
 ## Running the pipeline:
 We used py36 to run the pipeline.
 
