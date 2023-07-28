@@ -122,9 +122,7 @@ class ProcessNotebook(object):
                     notebook_id=notebook_id, mode=mode_num,
                     processed=consts.E_INSTALLED
                 )
-                self.execution.repository_id = session.query(Notebook).get(
-                    notebook_id
-                ).repository_id
+                self.execution.repository_id = session.get(Notebook, notebook_id).repository_id
             self.session.add(self.execution)
 
 

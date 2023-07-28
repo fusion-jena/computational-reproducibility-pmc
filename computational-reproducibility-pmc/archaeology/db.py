@@ -1882,6 +1882,34 @@ class NotebookCodeStyle(Base):
             u"<NotebookCodeStyle({0.repository_id}/{0.notebook_id}/{0.id})>"
         ).format(self)
 
+class ArticleMesh(Base):
+    """Article Table"""
+    # pylint: disable=invalid-name
+    __tablename__ = 'articlemesh'
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ['article_id'],
+            ['article.id']
+        ),
+        ForeignKeyConstraint(
+            ['pmid'],
+            ['article.pmid']
+        ),
+    )
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    article_id = Column(Integer)
+    pmid = Column(Integer)
+    meshid = Column(Integer)
+    mesh_label = Column(String)
+    toplevelmeshid = Column(Integer)
+    toplevelmeshlabel = Column(String)
+
+    @force_encoded_string_output
+    def __repr__(self):
+        return u"<ArticleMesh({0.article_id}/{0.pmid}/{0.meshid}/{0.id})>".format(self)
+
+
 
 @contextmanager
 def connect(echo=False, config=config):

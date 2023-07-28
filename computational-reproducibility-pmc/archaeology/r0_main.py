@@ -17,6 +17,7 @@ main.ORDER = [
     "p0_local_possibility",
     "p1_notebook_aggregate",
     "p2_sha1_exercises",
+    "r5_pmid_mesh",
 ]
 
 if __name__ == "__main__":

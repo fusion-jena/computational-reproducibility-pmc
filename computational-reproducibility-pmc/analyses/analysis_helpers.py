@@ -82,8 +82,8 @@ def var(key, value, template="{}"):
             for k, v in data.items()
         )
     return result
-            
-        
+
+
 
 def fetchgenerator(cursor, arraysize=1000):
     'An iterator that uses fetchmany to keep memory usage down'
@@ -92,8 +92,8 @@ def fetchgenerator(cursor, arraysize=1000):
         if not results:
             break
         yield from results
-        
-        
+
+
 def dask_from_query(session, query, file):
     q = session.execute(query)
     with open(file, 'w') as outfile:
@@ -281,8 +281,8 @@ def boxplot_distribution(column, first, last, step, ylabel, xlabel, draw_values=
 
 @contextmanager
 def savefig(name, width=8, height=6):
-    plt.rc('axes', titlesize=16) 
-    plt.rc('axes', labelsize=16) 
+    plt.rc('axes', titlesize=16)
+    plt.rc('axes', labelsize=16)
     plt.rc('font', size=14)
     yield
     fig = plt.gcf()
@@ -318,8 +318,8 @@ def cell_distribution(filename, width, height, select, bins, cell_type_bins_arra
         ax.set_xticklabels(["Beginning", "Middle", "End"])
         ax.set_ylabel("% of Cells" if relative else "# of Cells", fontsize=16)
         yield ax
-        ax.xaxis.set_ticks_position('none') 
-        ax.yaxis.set_ticks_position('none') 
+        ax.xaxis.set_ticks_position('none')
+        ax.yaxis.set_ticks_position('none')
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.spines['bottom'].set_visible(False)

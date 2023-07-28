@@ -19,6 +19,13 @@ def create_article_repository_db(session):
             if name == 'https://github.com/features/actions':
                 continue
             if 'orgs' in name and name.split("/")[3] == 'orgs':
+                vprint(1, "Organization={}".format(name))
+                continue
+            if 'collections' in name and name.split("/")[3] == 'collections':
+                vprint(1, "collections={}".format(name))
+                continue
+            if 'topics' in name and name.split("/")[3] == 'topics':
+                vprint(1, "topics={}".format(name))
                 continue
             count += 1
             repository = session.query(Repository).filter(
@@ -27,7 +34,7 @@ def create_article_repository_db(session):
             if repository is not None:
                 vprint(1, "Repository exists: ID={}".format(repository.id))
             else:
-                vprint(1, "Repository does not exists: ID={}".format(name))
+                vprint(1, "Loading repository from url={}".format(name))
                 load_repository_from_url(session, name, article.id)
     vprint(0, "Finished loading repositories")
 
