@@ -44,6 +44,7 @@ NOTEBOOK_TIMEOUT = int(os.environ.get("JUP_NOTEBOOK_TIMEOUT", 300))
 IS_SQLITE = DB_CONNECTION.startswith("sqlite")
 
 DB ='pmc'
+PUBMED_DB = 'pubmed'
 PUB_XML_FILE="pmc.xml"
 
 # Remember to add print to show_config if you add another variable
