@@ -2,27 +2,27 @@
 echo '***************************lbzip2************************'
 conda install -c conda-forge lbzip2
 
-echo '***************************raw_27************************'
-conda create -n raw_27 python=2.7 -y
-conda activate raw_27
+echo '***************************raw27************************'
+conda create -n raw27 python=2.7 -y
+conda activate raw27
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
 
-echo '***************************py_27************************'
-conda create -n py_27 python=2.7 anaconda -y
-conda activate py_27
+echo '***************************py27************************'
+conda create -n py27 python=2.7 anaconda -y
+conda activate py27
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
 
-echo '***************************raw_34************************'
-conda create -n raw_34 python=3.4 -y
-conda activate raw_34
+echo '***************************raw34************************'
+conda create -n raw34 python=3.4 -y
+conda activate raw34
 conda install jupyter -c conda-forge -y
 conda uninstall jupyter -y
 pip install --upgrade pip
@@ -32,27 +32,27 @@ pip install pipenv
 pip install -e archaeology
 pip install pathlib2
 
-echo '***************************py_34************************'
-conda create -n py_34 python=3.4 anaconda -y
-conda activate py_34
+echo '***************************py34************************'
+conda create -n py34 python=3.4 anaconda -y
+conda activate py34
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
 pip install -e archaeology
 
 
-echo '***************************raw_35************************'
-conda create -n raw_35 python=3.5 -y
-conda activate raw_35
+echo '***************************raw35************************'
+conda create -n raw35 python=3.5 -y
+conda activate raw35
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
 
-echo '***************************py_35************************'
-conda create -n py_35 python=3.5 anaconda -y
-conda activate py_35
+echo '***************************py35************************'
+conda create -n py35 python=3.5 anaconda -y
+conda activate py35
 conda install -y appdirs atomicwrites keyring secretstorage libuuid navigator-updater prometheus_client pyasn0 pyasn1-modules spyder-kernels tqdm jeepney automat constantly anaconda-navigator
 pip install --upgrade pip
 pip install nbdime
@@ -60,10 +60,10 @@ pip install pipenv --ignore-installed
 pip install -e  archaeology
 conda deactivate
 
-echo '***************************raw_36************************'
+echo '***************************raw36************************'
 
-conda create -n raw_36 python=3.6 -y
-conda activate raw_36
+conda create -n raw36 python=3.6 -y
+conda activate raw36
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
@@ -71,9 +71,9 @@ pip install -e  archaeology
 conda deactivate
 
 
-echo '***************************py_36************************'
-conda create -n py_36 python=3.6 anaconda -y
-conda activate py_36
+echo '***************************py36************************'
+conda create -n py36 python=3.6 anaconda -y
+conda activate py36
 conda install -y anaconda-navigator jupyterlab_server navigator-updater
 pip install --upgrade pip
 pip install nbdime
@@ -85,9 +85,9 @@ python -c "import nltk; nltk.download('stopwords')"
 conda deactivate
 
 
-echo '***************************raw_37************************'
-conda create -n raw_37 python=3.7 -y
-conda activate raw_37
+echo '***************************raw37************************'
+conda create -n raw37 python=3.7 -y
+conda activate raw37
 pip install --upgrade pip
 pip install nbdime
 pip install -U pipenv
@@ -95,9 +95,9 @@ pip install -e  archaeology
 conda deactivate
 
 
-echo '***************************py_37************************'
-conda create -n py_37 python=3.7 anaconda -y
-conda activate py_37
+echo '***************************py37************************'
+conda create -n py37 python=3.7 anaconda -y
+conda activate py37
 conda install -y _ipyw_jlab_nb_ext_conf alabaster anaconda-client anaconda-navigator anaconda-project appdirs asn1crypto astroid astropy atomicwrites attrs automat
 conda install -y babel backports backports.shutil_get_terminal_size beautifulsoup4 bitarray bkcharts blaze blosc bokeh boto bottleneck bzip2
 conda install -y cairo colorama constantly contextlib2 curl cycler cython
@@ -117,9 +117,9 @@ pip install -e  archaeology
 conda deactivate
 
 
-echo '***************************raw_38************************'
-conda create -n raw_38 python=3.8 -y
-conda activate raw_38
+echo '***************************raw38************************'
+conda create -n raw38 python=3.8 -y
+conda activate raw38
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
@@ -127,18 +127,18 @@ pip install -e archaeology
 conda deactivate
 
 
-echo '***************************py_38************************'
-conda create -n py_38 python=3.8 anaconda -y
-conda activate py_38
+echo '***************************py38************************'
+conda create -n py38 python=3.8 anaconda -y
+conda activate py38
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
 
-echo '***************************raw_39************************'
-conda create -n raw_39 python=3.9 -y
-conda activate raw_39
+echo '***************************raw39************************'
+conda create -n raw39 python=3.9 -y
+conda activate raw39
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
@@ -146,9 +146,9 @@ pip install -e archaeology
 conda deactivate
 
 
-echo '***************************py_39************************'
-conda create -n py_39 python=3.9 anaconda -y
-conda activate py_39
+echo '***************************py39************************'
+conda create -n py39 python=3.9 anaconda -y
+conda activate py39
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
@@ -156,9 +156,9 @@ pip install -e  archaeology
 conda deactivate
 
 
-echo '***************************raw_310************************'
-conda create -n raw_310 python=3.10 -y
-conda activate raw_310
+echo '***************************raw310************************'
+conda create -n raw310 python=3.10 -y
+conda activate raw310
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
@@ -166,9 +166,9 @@ pip install -e archaeology
 conda deactivate
 
 
-echo '***************************py_310************************'
-conda create -n py_310 python=3.10 anaconda -y
-conda activate py_310
+echo '***************************py310************************'
+conda create -n py310 python=3.10 anaconda -y
+conda activate py310
 pip install --upgrade pip
 pip install nbdime
 pip install pipenv
