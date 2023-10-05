@@ -7,6 +7,7 @@ conda create -n raw27 python=2.7 -y
 conda activate raw27
 pip install --upgrade pip
 pip install nbdime
+pip install ipywidgets==6.0.0
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
@@ -16,6 +17,7 @@ conda create -n py27 python=2.7 anaconda -y
 conda activate py27
 pip install --upgrade pip
 pip install nbdime
+pip install ipywidgets==6.0.0
 pip install pipenv
 pip install -e  archaeology
 conda deactivate
