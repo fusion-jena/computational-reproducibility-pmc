@@ -18,7 +18,7 @@ setup(
         'future',
         'pygithub',
         'timeout-decorator',
-        'yagmail[all]',
+        #'yagmail[all]',
         'psycopg2-binary',
         'matplotlib_venn',
         'langdetect',
