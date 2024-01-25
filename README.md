@@ -1,5 +1,5 @@
 # Computational reproducibility of Jupyter notebooks from biomedical publications
-This repository contains the code for the study of [computational reproducibility of Jupyter notebooks from biomedical publications](https://arxiv.org/pdf/2209.04308.pdf). Our focus lies in evaluating the extent of reproducibility of Jupyter notebooks derived from GitHub repositories linked to publications present in the biomedical literature repository, PubMed Central.
+This repository contains the code for the study of [computational reproducibility of Jupyter notebooks from biomedical publications](https://doi.org/10.1093/gigascience/giad113). Our focus lies in evaluating the extent of reproducibility of Jupyter notebooks derived from GitHub repositories linked to publications present in the biomedical literature repository, PubMed Central.
 
 ## Data Collection and Analysis
 We use the code for reproducibility of Jupyter notebooks from the study done by [Pimentel et al., 2019](https://zenodo.org/record/2592524) and adapted the code from [ReproduceMeGit](https://github.com/fusion-jena/ReproduceMeGit).
@@ -105,6 +105,7 @@ jupyter lab
 * Refer to the [Index.ipynb](./computational-reproducibility-pmc/analyses/Index.ipynb) notebook for the execution order and guidance.
 
 ## References:
+* Sheeba Samuel, Daniel Mietchen. (2024). [Computational reproducibility of Jupyter notebooks from biomedical publications](https://doi.org/10.1093/gigascience/giad113), GigaScience.
 * Sheeba Samuel, Daniel Mietchen. (2022). [Computational reproducibility of Jupyter notebooks from biomedical publications](https://arxiv.org/pdf/2209.04308.pdf), CoRR abs/2209.04308
 * Sheeba Samuel, & Daniel Mietchen. (2022). [Dataset of a Study of Computational reproducibility of Jupyter notebooks from biomedical publications](https://doi.org/10.5281/zenodo.6802158) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.6802158
 * Sheeba Samuel, & Daniel Mietchen. (2023). [Dataset of a Study of Computational reproducibility of Jupyter notebooks from biomedical publications](https://doi.org/10.5281/zenodo.8226725) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8226725
