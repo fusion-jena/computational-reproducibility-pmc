@@ -18,7 +18,7 @@ distributed==1.26.0
 entrypoints==0.3
 future==0.17.1
 HeapDict==1.0.0
-idna==2.8
+idna==3.7
 ipykernel==5.1.0
 ipython==7.3.0
 ipython-genutils==0.2.0
