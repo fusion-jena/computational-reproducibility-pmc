@@ -10,7 +10,7 @@ Click==7.0
 cloudpickle==0.8.0
 cryptography==2.6.1
 cycler==0.10.0
-dask==1.1.4
+dask==2021.10.0
 decorator==4.3.2
 defusedxml==0.5.0
 Deprecated==1.2.5
