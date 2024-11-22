@@ -1,4 +1,6 @@
 # Computational reproducibility of Jupyter notebooks from biomedical publications
+[![DOI](https://zenodo.org/badge/478930754.svg)](https://doi.org/10.5281/zenodo.14203554)
+
 This repository contains the code for the study of [computational reproducibility of Jupyter notebooks from biomedical publications](https://doi.org/10.1093/gigascience/giad113). Our focus lies in evaluating the extent of reproducibility of Jupyter notebooks derived from GitHub repositories linked to publications present in the biomedical literature repository, PubMed Central.
 
 ## Data Collection and Analysis
